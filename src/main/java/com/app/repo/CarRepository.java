@@ -1,13 +1,15 @@
-package com.app.service;
+package com.app.repo;
 
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.app.model.Car;
 import com.app.util.Fuel;
 import com.app.util.Transmission;
 
-public interface CabService {
+public interface CarRepository extends JpaRepository<Car, String>{
 	public String addCar(Car cab);
 	public List<Car> getAllCars();
 	public Optional<Car> findByCarNumber(String carNumber);
