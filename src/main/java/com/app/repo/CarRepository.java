@@ -15,9 +15,5 @@ public interface CarRepository extends JpaRepository<Car, String>{
 	void deleteById(String carNumber);
 	List<Car> findByFuel(Fuel fuel);
 	List<Car> findBySeats(Integer numOfSeats);
-	List<Car> findByTransmission(Transmission type);
-	List<Car> findByTransmissionAndFuel(Transmission type, Fuel fuel);
-	List<Car> findByTransmissionAndSeats(Transmission type, Integer numOfSeats);
 	List<Car> findBySeatsAndFuel(Integer numOfSeats, Fuel fuel);
-	List<Car> findByTransmissionAndFuelAndSeats(Transmission type, Fuel fuel, Integer numOfSeats);
 }

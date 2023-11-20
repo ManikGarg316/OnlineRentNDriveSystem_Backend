@@ -2,7 +2,44 @@ package com.app.model;
 
 import com.app.util.Roles;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Users")
 public class User {
+	
+	@Id
+	@Column(name = "uname")
+	private String username;
+	
+	@Column(name = "pwd")
+	private String password;
+	
+	@Column(name = "contact_number")
+	private String mobile;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "role")
+	private Roles role;
+	
+//	@OneToMany(cascade = CascadeType.ALL)
+//    private List<Car> cars;
+	
+//	@OneToMany(cascade = CascadeType.ALL)
+//  private List<Booking> cars;
+	
 	public User(String username, String password, String mobile, String name, String email, Roles role) {
 		super();
 		this.username = username;
@@ -12,12 +49,8 @@ public class User {
 		this.email = email;
 		this.role = role;
 	}
-	private String username;
-	private String password;
-	private String mobile;
-	private String name;
-	private String email;
-	private Roles role;
+	
+	
 	public String getUsername() {
 		return username;
 	}

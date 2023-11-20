@@ -1,5 +1,8 @@
 package com.app.model;
 
+//import javax.persistence.Entity;
+//
+//@Entity
 public class Brand {
 	public Brand(Integer id, String name) {
 		super();
